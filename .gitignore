@@ -1,0 +1,6 @@
+*.obj
+*.gb
+*.exe
+*.dll
+*.sn*
+build/
