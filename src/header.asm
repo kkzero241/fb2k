@@ -23,14 +23,22 @@ SECTION "rst18", ROM0[$0018]
 SECTION "rst20", ROM0[$0020]
     jp Boot
 
+    db $FF, $FF, $FF, $FF, $FF
+
 SECTION "rst28", ROM0[$0028]
     jp Boot
+
+    db $FF, $FF, $FF, $FF, $FF
 
 SECTION "rst30", ROM0[$0030]
     jp Boot
 
+    db $FF, $FF, $FF, $FF, $FF
+
 SECTION "rst38", ROM0[$0038]
     jp Boot
+
+    db $FF, $FF, $FF, $FF, $FF
 
 SECTION "vblank", ROM0[$0040]
     ei
@@ -55,3 +63,7 @@ SECTION "serial", ROM0[$0058]
 SECTION "joypad", ROM0[$0060]
     ei
 	jp Joypad
+
+REPT 28
+    db $FF
+ENDR

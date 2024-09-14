@@ -22,7 +22,7 @@ LINKERFLAGS     :=  -m $(OUTPUT).map -n $(OUTPUT).sym -d
 all: build
 
 build: $(OBJ_FILES)
-	$(LINKER) -O overlay.gb -o $(OUTPUT).gb $(LINKERFLAGS) $(OBJ_FILES)
+	$(LINKER) -o $(OUTPUT).gb $(LINKERFLAGS) $(OBJ_FILES)
 	$(FIX) $(FIXFLAGS) $(OUTPUT).gb
  
 $(BUILD_DIR)/obj/%.obj : src/%.asm | $(OBJ_DIRS)
